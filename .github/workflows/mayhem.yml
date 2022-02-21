@@ -41,7 +41,7 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
-      - name: Mayhem for Code
+      - name: Start analysis
         uses: ethan42/mcode-action@6ed2e058539ed7094b221f90c90f6e120422ee01
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
