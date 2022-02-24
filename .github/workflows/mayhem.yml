@@ -23,5 +23,5 @@ jobs:
         uses: ethan42/mcode-action@a6cfde181437027200379d71f3b690e709de71d4
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ethan42/lighttpd:master --corpus file://mayhem/corpus
+          args: --image ethan42/lighttpd:pr-16 --corpus file://mayhem/corpus
           sarif-output: sarif
