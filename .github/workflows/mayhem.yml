@@ -42,7 +42,8 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Start analysis
-        uses: ethan42/mcode-action@6ed2e058539ed7094b221f90c90f6e120422ee01
+        uses: ethan42/mcode-action@468899e0245c387fa197345c7494218af89e2613
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
           args: --image ${{ steps.meta.outputs.tags }} --corpus file://mayhem/corpus
+          sarif-output: sarif
