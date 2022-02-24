@@ -20,8 +20,14 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Start analysis
-        uses: ethan42/mcode-action@4a0b6f1935ceec04870d541313664a32a30c82de
+        uses: ethan42/mcode-action@e5ced25a1057dd8a345a0432d002f7439bdfe56a
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
           args: --image ethan42/lighttpd:pr-16 --corpus file://mayhem/corpus
           sarif-output: sarif
+
+
+      - name: Upload SARIF file(s)
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: sarif
